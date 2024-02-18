@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply box-border no-scrollbar;
+}
+
+header {
+	@apply bg-red-600 text-white sticky top-0 z-50;
+	@apply flex flex-row justify-between;
+}
+
+header h1 {
+	@apply text-5xl font-semibold p-5;	
+}
+
+header .nav-buttons {
+	@apply flex flex-row gap-3 self-end align-middle px-5;
+}
+
+header .nav-buttons a {
+	@apply text-center px-3 py-2 rounded-t-lg bg-red-500 align-middle text-lg hover:bg-red-400;
+}
+
+
+#main-content {
+	@apply h-screen w-screen;
+	@apply flex flex-row z-0;
+}
+
+#main-content aside {
+	@apply bg-gray-100 basis-60 flex-shrink-0 text-lg;
+}
+
+#main-content aside div {
+	@apply text-xl bg-gray-300 w-full p-3;
+}
+#main-content aside ul li {
+	@apply border-b-gray-300 border-b-2;
+}
+#main-content aside ul li a {
+	@apply w-full h-full block p-3 hover:bg-gray-50;
+}
+
+article {
+	@apply shrink;
+	min-width: 0;
+}
+
+#foryou h2 {
+	@apply text-lg font-semibold p-3;
+}
+.carousel {
+	@apply relative w-full p-0;
+}
+
+.carousel-items {
+	@apply flex flex-row overflow-hidden m-10 flex-shrink flex-grow-0 gap-5 p-5;
+	@apply scroll-smooth;
+	-webkit-mask-image: linear-gradient(to right, transparent 0, black 2em, black calc(100% - 2em), transparent 100%);
+}
+
+
+.carousel-item {
+	@apply flex flex-col gap-3;
+}
+.carousel-item .item-desc {
+	@apply text-center h-10;
+}
+.carousel-item .item-price {
+	@apply text-center font-bold text-red-600;
+}
+.carousel-item .image-div {
+	@apply w-36 aspect-square text-center;
+}
+.carousel-item .image-div img {
+	@apply object-contain aspect-square;
+}
+
+.carousel button {
+	@apply w-6 h-12 bg-red-900 text-white;
+	@apply absolute top-1/2;
+}
+.carousel-left {
+	@apply left-0 rounded-r-md;
+}
+.carousel-right {
+	@apply right-0 rounded-l-md;
+}
+.carousel button span {
+	@apply text-sm;
+}
+
+footer {
+	@apply p-3 bg-red-600 flex flex-row justify-center text-white;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
